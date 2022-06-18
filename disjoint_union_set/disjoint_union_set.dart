@@ -7,8 +7,8 @@ int find(int a, List<int> parent) {
 }
 
 void union(int a, int b, List<int> parent, List<int> rank) {
-  int a1 = find(a, parent); // to find parent of a
-  int b1 = find(b, parent); // to find parent of b
+  final int a1 = find(a, parent); // to find parent of a
+  final int b1 = find(b, parent); // to find parent of b
   if (a1 == b1) // if both have same parent that is both are in same set
   {
     print('both the elements are in same set\n');
@@ -31,17 +31,15 @@ void union(int a, int b, List<int> parent, List<int> rank) {
 }
 
 int main() {
-  int n = 10;
-  List<int> parent = List.filled(n, n);
-  List<int> rank = List.filled(n, n);
-  for (int i = 0; i < 10; i++)
-
-    /// in starting the node is itself the parent
+  const int n = 10;
+  final List<int> parent = List.filled(n, n);
+  final List<int> rank = List.filled(n, n);
+  for (int i = 0; i < 10; i++) {
     parent[i] = i;
-  for (int i = 0; i < 10; i++)
-
-    /// by default the rank of all nodes is 1
+  }
+  for (int i = 0; i < 10; i++) {
     rank[i] = 1;
+  }
 
   /// 3 is friend of 8
   union(3, 8, parent, rank);
@@ -71,16 +69,18 @@ int main() {
   );
 
   /// to check whether 5 is friend of 7 or not
-  if (find(5, parent) == find(7, parent))
+  if (find(5, parent) == find(7, parent)) {
     print('5 is a friend of 7\n');
-  else
+  } else {
     print('5 is not a friend of 7\n');
+  }
 
   /// to check whether 3 is friend of 1 or not
-  if (find(3, parent) == find(1, parent))
+  if (find(3, parent) == find(1, parent)) {
     print("3 is a friend of 1\n");
-  else
+  } else {
     print('3 is not a friend of 1\n');
+  }
 
   return 0;
 }
