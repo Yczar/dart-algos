@@ -8,29 +8,43 @@
 it works by continuously dividing in half of the portion of the list of items that could contain the item.
 
 
-Below is an example that takes in a key as inputs and finds it in the list of generated numbers using thr binary search algorithm.
+Below is an example that takes in a key as inputs and finds it in the list of generated numbers using the binary search algorithm.
+
+
 
 */
 
-void main() {
+
+//note : to run this as standalone , add a main() function.
+void run() {
   // Generates lists of 20 numbers
   var item = List<int>.generate(20, (i) => i * i, growable: false);
   print(item);
 
-  // inputs key in array
-  var key = 196;
+  //key inputs
+  //replace key with any number of your choice.
+  var key = 25;
 
   if (bsearch(key, item, 0, item.length - 1)) {
     print('keyfound : $key');
+
+  }
+  else {
+    print('key not among list');
   }
 
-  //key not in the array
+  //another  key input example
   key = 404;
-  if (!bsearch(key, item, 0, item.length - 1)) {
-    print('can not find: $key');
+  if (bsearch(key, item, 0, item.length - 1)) {
+    print('keyfound : $key');
+
+  }
+  else {
+    print('key not among list');
   }
 }
 
+//binary search implementation functions
 bool bsearch(int key, List<int> item, int start, int end) {
   if (start > end) return false;
 
