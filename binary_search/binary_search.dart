@@ -7,6 +7,8 @@
 
 it works by continuously dividing in half of the portion of the list of items that could contain the item.
 
+it compares  the target valaue to the middle element of the Array.
+
 
 Below is an example that takes in a key as inputs and finds it in the list of generated numbers using the binary search algorithm.
 
@@ -38,13 +40,14 @@ void run() {
   if (bsearch(key, item, 0, item.length - 1)) {
     print('keyfound : $key');
 
+
   }
   else {
     print('key not among list');
   }
 }
 
-//binary search implementation functions
+//binary search implementation function
 bool bsearch(int key, List<int> item, int start, int end) {
   if (start > end) return false;
 
