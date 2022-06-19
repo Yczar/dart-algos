@@ -6,7 +6,8 @@
 
 -----------------How does it work ? ------------------
 
-it works
+it works by continuously dividing in half of the portion of the list of items that could contain the item.
+
 
 
 
