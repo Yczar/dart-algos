@@ -9,7 +9,7 @@
 it works by continuously dividing in half of the portion of the list of items that could contain the item.
 
 
-
+Below is an example
 
 */
 
@@ -18,9 +18,11 @@ it works by continuously dividing in half of the portion of the list of items th
 
 void main() {
 
-  // Generates lists of number
+  // Generates lists of 20 numbers
   var item = List<int>.generate(20, (i) => i * i, growable: false);
   print(item);
+
+  // inputs key
   var key = 196;
 
   if (bsearch(key, item, 0, item.length - 1)) {
