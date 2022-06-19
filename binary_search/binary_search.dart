@@ -9,7 +9,7 @@
 it works by continuously dividing in half of the portion of the list of items that could contain the item.
 
 
-Below is an example
+Below is an example that takes in a key as inputs and finds it in the list of generated numbers using thr binary search algorithm.
 
 */
 
