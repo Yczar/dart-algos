@@ -16,11 +16,10 @@ Below is an example that takes in a key as inputs and finds it in the list of ge
 
 */
 
-
 //note : to run this as standalone , add a main() function.
 void run() {
   // Generates lists of 20 numbers
-  var item = List<int>.generate(20, (i) => i * i, growable: false);
+  final item = List<int>.generate(20, (i) => i * i, growable: false);
   print(item);
 
   //key inputs
@@ -29,9 +28,7 @@ void run() {
 
   if (bsearch(key, item, 0, item.length - 1)) {
     print('keyfound : $key');
-
-  }
-  else {
+  } else {
     print('key not among list');
   }
 
@@ -39,10 +36,7 @@ void run() {
   key = 404;
   if (bsearch(key, item, 0, item.length - 1)) {
     print('keyfound : $key');
-
-
-  }
-  else {
+  } else {
     print('key not among list');
   }
 }
@@ -51,7 +45,7 @@ void run() {
 bool bsearch(int key, List<int> item, int start, int end) {
   if (start > end) return false;
 
-  var mid = (start + end) ~/ 2;
+  final mid = (start + end) ~/ 2;
 
   if (item[mid] == key) {
     return true;
