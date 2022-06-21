@@ -19,7 +19,11 @@ Below is an example that takes in a key as inputs and finds it in the list of ge
 //note : to run this as standalone , add a main() function.
 void run() {
   // Generates lists of 20 numbers
-  final item = List<int>.generate(20, (i) => i * i, growable: false);
+  final item = List<int>.generate(
+    20,
+    (i) => i * i,
+    growable: false,
+  );
   print(item);
 
   //key inputs
