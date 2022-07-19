@@ -48,7 +48,9 @@ void run() {
 //binary search implementation function
 bool bsearch(int key, List<int> item, int start, int end) {
   if (start > end) return false;
-
+  
+  item = item.sort();
+  
   final mid = (start + end) ~/ 2;
 
   if (item[mid] == key) {
